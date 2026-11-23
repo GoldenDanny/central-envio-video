@@ -1,0 +1,21 @@
+CENTRAL DE ENVIO DE VIDEOS - PRODUTORA DE EDICAO DANNY COSTA
+
+Estrutura inicial para GitHub + Netlify.
+
+Arquivos do site:
+- index.html
+- style.css
+- app.js
+
+Funcao Netlify:
+- netlify/functions/central-upload.js
+
+Configuracao:
+- netlify.toml
+
+IMPORTANTE:
+Esta e uma estrutura inicial. O formulario visual ainda nao realiza o envio real dos videos.
+A funcao central-upload.js ainda precisa ser validada junto ao Web App do Google Apps Script,
+e o app.js precisa receber a implementacao do upload retomavel antes de liberar o site aos clientes.
+
+Nao compartilhe segredos, tokens ou propriedades privadas no repositorio.

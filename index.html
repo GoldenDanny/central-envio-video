@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6f2da8">
+  <meta name="description" content="Central de Envio de Vídeos - Produtora de Edição Danny Costa">
+  <title>Central de Envio de Vídeos | Danny Costa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="brand-header">
+      <div class="brand-mark" aria-hidden="true">▶</div>
+      <p class="brand-kicker">PRODUTORA DE EDIÇÃO DANNY COSTA</p>
+      <h1>Central de Envio de Vídeos</h1>
+      <p class="brand-description">
+        Envie seus vídeos de forma simples e segura, mantendo a qualidade original.
+      </p>
+    </header>
+
+    <section class="upload-card" aria-labelledby="form-title">
+      <div class="section-icon" aria-hidden="true">☁</div>
+      <h2 id="form-title">Envie seus vídeos</h2>
+      <p class="section-description">
+        Informe os dados do projeto e escolha os vídeos diretamente da galeria do seu celular.
+      </p>
+
+      <form id="uploadForm" novalidate>
+        <div class="form-field">
+          <label for="projectName">Nome do Projeto <span aria-hidden="true">*</span></label>
+          <input
+            id="projectName"
+            name="projectName"
+            type="text"
+            placeholder="Ex.: Natal Loja Havan"
+            autocomplete="off"
+            maxlength="120"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="whatsapp">Contato WhatsApp <span aria-hidden="true">*</span></label>
+          <input
+            id="whatsapp"
+            name="whatsapp"
+            type="tel"
+            placeholder="(99) 99999-9999"
+            inputmode="tel"
+            autocomplete="tel"
+            maxlength="20"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="videoFiles">Vídeos para envio <span aria-hidden="true">*</span></label>
+          <label class="file-dropzone" for="videoFiles" id="dropzone">
+            <span class="file-icon" aria-hidden="true">▣</span>
+            <strong>Selecionar vídeos</strong>
+            <span>Toque aqui para escolher os vídeos da galeria</span>
+            <small>Você pode selecionar vários arquivos de uma vez.</small>
+          </label>
+          <input
+            id="videoFiles"
+            name="videoFiles"
+            type="file"
+            accept="video/*"
+            multiple
+            hidden
+          >
+          <div id="selectedFiles" class="selected-files" aria-live="polite">
+            <p class="empty-files">Nenhum vídeo selecionado.</p>
+          </div>
+        </div>
+
+        <div class="upload-notice" role="note">
+          <strong>Antes de enviar</strong>
+          <ul>
+            <li>Grave preferencialmente com o celular na horizontal (16:9).</li>
+            <li>Selecione os vídeos diretamente da galeria do aparelho.</li>
+            <li>Você pode escolher mais de um vídeo.</li>
+            <li>Os arquivos serão enviados sem compressão, preservando a qualidade original.</li>
+          </ul>
+        </div>
+
+        <button class="submit-button" id="submitButton" type="submit">
+          <span aria-hidden="true">➤</span>
+          Continuar para envio
+        </button>
+        <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="page-footer">
+      <span>Central de Envio de Vídeos</span>
+      <span>Produtora de Edição Danny Costa</span>
+    </footer>
+  </main>
+
+  <!-- A lógica de seleção e envio será implementada em app.js. -->
+  <script src="app.js" defer></script>
+</body>
+</html>
